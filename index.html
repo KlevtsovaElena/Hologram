@@ -25,13 +25,11 @@
                 </div>
                 <div class="cartImg">
                     <a href="favorite.html" onclick="showCart()"><span class="heart-red">&#10084</span> Избранное</a>
-                    <!-- <button id="countCart"></button> -->
                 </div>
             </div>
-
-
         </div>
     </header>
+
     <article class="main">
         <div class="wrapper">
             <article class="main-description">
@@ -43,6 +41,20 @@
             <article id="catalog">
                     <div class="catalog__cards">
                     </div>
+            </article>
+
+            <article id="feedback-form">
+                <form action="../api/post/reviews/index.php" method="post" enctype="multipart/form-data" class="feedback-form">
+                    <p class="feedback-form__text">Оставьте своё сообщение и мы свяжемся с Вами</p>
+                    <input type="text" id="name" name="name" placeholder="Имя*" value="" required="">
+
+                    <textarea id="description" name="description" placeholder="Ваше сообщение..." rows="5" value="" required=""></textarea>
+
+                    <input type="text" id="connection" name="connection" placeholder="Способ связи" value="">
+                    
+                        
+                    <button class="feedback-form__btn" type="submit">ОТПРАВИТЬ</button>
+                </form>
             </article>
         </div>
     </article>
@@ -59,9 +71,7 @@
                     <a href="https://t.me/KlevtsovaEV"><img src="img/telegramm.png" class="contactsSize"></a>
 
                 </div>
-            </div>
-            <!-- <div id="info"><i>Учебный проект с использованием API: </i><a href="https://fakestoreapi.com/products/" target="_blank"><i>https://fakestoreapi.com/products/</i></a></div> -->
-        
+            </div>        
         </div>
     </div>
     </footer> 
@@ -76,7 +86,7 @@
             </div>
             <div class="description">
                 <h3>{price} &#8381</h3>
-                <div id="name">{title}</div>
+                <div class="name">{title}</div>
             </div>
             <div class="btn">
                 <button id="cart{id}" class="cartBtn cartAdd" onclick="hiddenCartAdd()">В избранное</button>

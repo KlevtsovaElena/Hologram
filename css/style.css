@@ -108,7 +108,7 @@ header, footer{
 .d-none{display: none;}
 .d-iblock{display: inline-block;}
 /*header*/    
-.nameShop{font-size: 18px;}
+.nameShop{font-size: 22px;}
 .menu{
     display: flex;
     column-gap: 40px;
@@ -210,6 +210,7 @@ header, footer{
     justify-content: center;
     height: 200px;
     width: 100%;
+    cursor: pointer;
 }
 .cardImgID{
     display: flex;
@@ -222,7 +223,7 @@ header, footer{
     padding: 5px 0 5px;
     text-align: center;
 }
-#name{
+.name{
     padding: 5px 0;
     color: #dcdcdc;
     height: 20px;
@@ -307,6 +308,170 @@ header, footer{
 }
 
 
+
+
+
+
+
+
+.feedback-form__name {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.feedback-form__btn {
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    background: #339966;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    border: none;
+    color: white;
+}
+.feedback-form__btn:hover{
+    box-shadow: 0 0 15px 0 rgb(0, 255, 0, 35%);
+    transform: translateY(-2px);
+}
+
+.feedback-form {
+    padding: 20px 30px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(22,24,22,100);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 95%;
+}
+.feedback-form > input,
+.feedback-form > textarea {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 40px;
+    outline: 0;
+    width: 100%;
+    border: solid #eae9e9 1.5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+
+.c-pointer .rating-item {
+    cursor: pointer;
+}
+
+.feedback-form label {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-weight: 700;
+}
+
+.feedback-form > input::placeholder,
+.feedback-form > textarea::placeholder {
+    opacity: 0.5;
+    font-size: 14px;
+}
+.feedback-form__text {
+    color: white;
+    font-size: 20px;
+}
+
+
+
+/* @media(max-width: 520px) {
+    h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .wrapper {
+        gap: 20px;
+    }
+    .name, .title, .description {
+        font-size: 14px;
+    }
+    .review-send .btn-big {
+        width: 175px;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .feedback-form {
+        font-size: 14px;
+    }
+    .feedback-form__text {
+        font-size: 18px;
+    }
+    .photo-prew {
+        margin-bottom: 10px;
+    }
+    .feedback-form > input,
+    .feedback-form > textarea {
+    margin: 5px 0;
+    }
+    .photo-prew {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .photo {
+        margin-bottom: 0;
+    }
+    .name {
+        text-align: center;
+    }
+    input#photo {
+        max-width: 250px;
+        font-size: 10px;
+    }
+    .feedback-form__photo {
+        text-align: center;
+    }
+    .rating-title {
+        justify-content: center;
+    }
+    .star-container {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .star-container > span {
+        display: block;
+        margin-bottom: 20px;
+    }
+    /* .feedback-form .star {
+        margin: 0;
+
+    }
+    .feedback-form label {
+        left: 5px;
+    } */
+/* } */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* @media (max-width: 850px){
     body, footer, header{font-size: 12px;}
     #containerCards{width:100%;}
@@ -324,15 +489,22 @@ header, footer{
     .heartRed, .heart{font-size: 18px;  }
 } */
 @media (max-width: 650px){
-    .footerMenu, .header, .menu{
+  .menu{
         align-items: center;
         flex-direction: column;
+        font-size: 14px;
+    }
+    .footerMenu{
+        padding: 10px 0;
+        flex-direction: column;
+        font-size: 14px;
     }
 
-    .cartImg{padding-top: 10px;}
-    #countCart{top: 2px;}
-    #info{text-align: center;}
-    footer, header{height: auto;}
+    .cartImg {
+        font-size: 14px;
+    }
+    footer{height: auto;}
+    header{height: 80px;}
 
 }
 @media (max-width: 600px){
