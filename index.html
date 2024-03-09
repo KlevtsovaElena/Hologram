@@ -1,53 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPAwithAPI</title>
+    <title>VAX</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="container">
-        <header>
+<div class="container">
+    <header>
+        <div class="wrapper">
             <div class="header">
-                <div class="nameShop">SHOP</div>
+                <div class="nameShop">VAX</div>
                 <div class="menu">
-                    <a href="#" onclick="renderCatalog()">
-                        Каталог
+                    <a href="#catalog">
+                        Голограммы
                     </a>
-                    <a href="#" onclick="showDeliveryPay()">
-                        Доставка и Оплата
-                    </a>
-                    <a href="#" onclick="showContacts()">
+                    <a href="contact.html">
                         Контакты
+                    </a>
+                    <a href="#feedback-form" onclick="showFeedback()">
+                        Обратная связь
                     </a>
                 </div>
                 <div class="cartImg">
-                    <img src="img/cartImg.png" onclick="showCart()">
-                    <button id="countCart"></button>
+                    <a href="favorite.html" onclick="showCart()"><span class="heart-red">&#10084</span> Избранное</a>
+                    <!-- <button id="countCart"></button> -->
                 </div>
-        </header>
-
-        <div id="backgroundPage">
-            <div id="containerPage"></div>
-        </div>
-
-        <footer>
-            <div class="footer">
-                <div class="footerMenu">
-                    <a href="tel: +79060685310" target="_blank">☏ +7(000)000-00-00</a>
-                    <a href="mailto: evchemez@mail.ru" target="_blank">✉ shop@shop.ru</a>
-                    <div class="contact">
-                        <a href="#"><img src="img/vk.png" class="contactsSize"></a>
-                        <a href="#"><img src="img/telegramm.png" class="contactsSize"></a>
-                        <a href="#"><img src="img/insta.jpg" class="contactsSize"></a>
-                    </div>
-                </div>
-                <div id="info"><i>Учебный проект с использованием API: </i><a href="https://fakestoreapi.com/products/" target="_blank"><i>https://fakestoreapi.com/products/</i></a></div>
             </div>
-        </footer> 
 
+
+        </div>
+    </header>
+    <article class="main">
+        <article class="main-description">
+            <div class="wrapper">
+                <div class="main-description__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam modi veritatis impedit voluptatem, delectus sed rerum error nam, totam quis optio. Corrupti animi quos adipisci eligendi obcaecati necessitatibus possimus! 
+                </div>
+            </div>
+        </article>
+        <article id="catalog">
+            <div class="wrapper">
+                <div class="catalog__cards">
+                </div>
+            </div>
+        </article>
+    </article>
+
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer">
+            <div class="footerMenu">
+                <a href="tel: +79060685310" target="_blank">☏ +7(906)068-53-10</a>
+                <a href="mailto: evchemez@mail.ru" target="_blank">✉ evchemez@mail.ru</a>
+                <div class="contact">
+                    <a href="#"><img src="img/whatsap.png" class="contactsSize"></a>
+                    <a href="#"><img src="img/telegramm.png" class="contactsSize"></a>
+
+                </div>
+            </div>
+            <!-- <div id="info"><i>Учебный проект с использованием API: </i><a href="https://fakestoreapi.com/products/" target="_blank"><i>https://fakestoreapi.com/products/</i></a></div> -->
+        
+        </div>
     </div>
+    </footer> 
+
+</div>
 <!--создаём шаблоны для страничек-->
     <!--для каталога товаров-->
     <template id="tmpl-catalog">
@@ -59,14 +79,9 @@
                 <h3>{price} &#8381</h3>
                 <div id="name">{title}</div>
             </div>
-            <div>
-                <h3>&#10026 {rate}</h3>
-            </div>
             <div class="btn">
-                <button id="cart{id}" class="cartBtn cartAdd" onclick="hiddenCartAdd()">В корзину</button>
-                <button id="cart{id}Delete" class="cartBtn cartDelete d-none" onclick="hiddenCartDelete()">Удалить</button>
-                <button id="heart{id}" class="heart" onclick="hiddenHeart()">&#9825</button>
-                <button id="heart{id}Red" class="heartRed  d-none" onclick="hiddenHeartRed()">&#10084</button>
+                <button id="cart{id}" class="cartBtn cartAdd" onclick="hiddenCartAdd()">В избранное</button>
+                <button id="cart{id}Delete" class="cartBtn cartDelete d-none" onclick="hiddenCartDelete()">Убрать из избранного</button>
             </div>
         </div>       
     </template>
