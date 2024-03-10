@@ -57,13 +57,13 @@ header, footer{
 .main-description {
     font-family: 'Poppins', sans-serif;
     display: flex;
-    width: 95%; 
+    width: 90%; 
     height: 350px;
     color: white;
     background: rgba(22,24,22,100);
     margin: 10px auto;
     border-radius: 10px;
-
+    padding: 20px;
 }
 .contact {
     font-family: 'Poppins', sans-serif;
@@ -71,14 +71,14 @@ header, footer{
     justify-content: center;
     align-items: center;
     width: 90%; 
-    height: 400px;
+    height: 300px;
     color: white;
     background: rgba(22,24,22,100);
     margin: 10px auto;
     border-radius: 10px;
 }
 .contact-container {
-    height: 100%;
+
     display: flex;
     align-items: center;
 }
@@ -90,6 +90,21 @@ header, footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.main-description__logo {
+    font-size: 20px;
+}
+.vintage, .avelanche {
+    padding-left: 12px;
+    line-height: 22px;
+}
+.exavation {
+    line-height: 22px;  
+}
+.big-letter {
+    font-size: 22px;
+    font-weight: 700;
+    color: red;
 }
 .header, .footer{
     width: 100%;
@@ -247,13 +262,7 @@ header, footer{
     height: auto;
     background-color: white;
 }
-.rating{
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    column-gap: 10px;
-    padding: 0 0 10px;
-}
+
 .btn{
     display: flex;
     justify-content: center;
@@ -270,7 +279,7 @@ header, footer{
 .cartBtn{
     width: 150px;
     height: 33px;
-    border-radius: 12px;
+    border-radius: 10px;
     color: white;
     border: none;
 }
@@ -311,21 +320,13 @@ header, footer{
 
 
 
-
-
-
-.feedback-form__name {
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
 .feedback-form__btn {
     padding: 10px;
     width: 80%;
     margin: 10px auto;
     text-align: center;
     background: #339966;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
     transition: all 0.3s;
     border: none;
@@ -337,16 +338,16 @@ header, footer{
 }
 
 .feedback-form {
+    font-family: 'Poppins', sans-serif;
     padding: 20px 30px;
     margin: 20px auto;
     text-align: center;
     background: rgba(22,24,22,100);
     border-radius: 10px;
     box-sizing: border-box;
-    width: 95%;
+    width: 90%;
 }
-.feedback-form > input,
-.feedback-form > textarea {
+.form-el {
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
@@ -354,9 +355,10 @@ header, footer{
     outline: 0;
     width: 100%;
     border: solid #eae9e9 1.5px;
-    font-size: 16px;
+    font-size: 12px;
     box-sizing: border-box;
     background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
 }
 
 .c-pointer .rating-item {
@@ -370,16 +372,31 @@ header, footer{
     font-weight: 700;
 }
 
-.feedback-form > input::placeholder,
-.feedback-form > textarea::placeholder {
+.form-el::placeholder {
     opacity: 0.5;
-    font-size: 14px;
+    font-size: 12px;
 }
 .feedback-form__text {
     color: white;
     font-size: 20px;
 }
-
+.add-favorite {
+    color: white;
+    text-align: left;
+}
+.favorite-list {
+    margin: -12px 0 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 40px;
+    outline: 0;
+    width: 100%;
+    border: solid #eae9e9 1.5px;
+    font-size: 12px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+}
 
 
 /* @media(max-width: 520px) {
@@ -472,22 +489,6 @@ header, footer{
 
 
 
-/* @media (max-width: 850px){
-    body, footer, header{font-size: 12px;}
-    #containerCards{width:100%;}
-    #containerPage{width:100%;}
-    .card{
-        width: 130px;
-        height: 270px;
-    }
-    .card img{width: 100px;}
-    .cardImg{height: 150px;}
-    .cartBtn{
-        width: 80px;
-        height: 25px;
-    }
-    .heartRed, .heart{font-size: 18px;  }
-} */
 @media (max-width: 650px){
   .menu{
         align-items: center;
