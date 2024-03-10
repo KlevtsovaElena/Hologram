@@ -32,37 +32,15 @@
 
     <article class="main">
         <div class="wrapper">
-            <article class="main-description">
-                    <div class="main-description__content">
-                        <div class="main-description__logo">
-                            <div class="vintage"><span class="big-letter">V</span>intage</div>
-                            <div class="avelanche"><span class="big-letter">A</span>velanche</div>
-                            <div class="exavation">e<span class="big-letter">X</span>avation</div>
-                        </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam modi veritatis impedit voluptatem, delectus sed rerum error nam, totam quis optio. Corrupti animi quos adipisci eligendi obcaecati necessitatibus possimus! 
+
+            <article id="card-page">
+                <div class="card-page__container">
+                    <div class="card-page__card">
+
                     </div>
-            </article>
-            
-            <article id="catalog">
-                    <div class="catalog__cards">
-                    </div>
+                </div>
             </article>
 
-            <article id="feedback-form">
-                <form action="../api/post/reviews/index.php" method="post" enctype="multipart/form-data" class="feedback-form">
-                    <p class="feedback-form__text">Оставьте своё сообщение и мы свяжемся с Вами</p>
-                    <input type="text" id="name" name="name" placeholder="Имя*" value="" required="" class="form-el">
-
-                    <div class="add-favorite"><input type="checkbox">Добавить в сообщение голограммы из Избранного</div>
-                    <textarea id="description" name="description" placeholder="Ваше сообщение..." rows="5" value="" class="form-el"></textarea>
-                    <textarea id="favorite-list" name="favorite-list" rows="2" readonly class="favorite-list">Ghbvthjsdvbhsdbvjhdbv</textarea>
-
-                    <input type="text" id="connection" name="connection" placeholder="Способ связи" value="" class="form-el">
-                    
-                        
-                    <button class="feedback-form__btn" type="submit">ОТПРАВИТЬ</button>
-                </form>
-            </article>
         </div>
     </article>
 
@@ -88,9 +66,9 @@
     <!--для каталога товаров-->
     <template id="tmpl-catalog">
         <div id="card{id}" class="card" >
-            <a href="card.html" class="cardImg">
+            <div class="cardImg" onclick="renderCard({id})">
                 <img src="{image}">
-            </a>
+            </div>
             <div class="description">
                 <h3>{price} &#8381</h3>
                 <div class="name">{title}</div>
@@ -102,6 +80,7 @@
         </div>       
     </template>
 
+    <!--для одного товара подробнее-->
     <!--для одного товара подробнее-->
     <template id="tmpl-card">
         <div id="card{id}" class="cardID">
@@ -120,8 +99,8 @@
             </div>
             <div><h3>{price} &#8381</h3></div>
             <div class="btn">
-                <button id="cart{id}" class="cartBtn cartAdd" onclick="hiddenCartAdd()">В корзину</button>
-                <button id="cart{id}Delete" class="cartBtn cartDelete  d-none" onclick="hiddenCartDelete()">Удалить</button>
+                <button id="cart{id}" class="cartBtn cartAdd" onclick="hiddenCartAdd()">В избранное</button>
+                <button id="cart{id}Delete" class="cartBtn cartDelete  d-none" onclick="hiddenCartDelete()">Убрать из избранного</button>
             </div>
         </div>          
     </template>

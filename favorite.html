@@ -11,35 +11,38 @@
     <header>
         <div class="wrapper">
             <div class="header">
-                <div class="nameShop">VAX</div>
+                <div class="nameShop"><a href="index.html">VAX</a></div>
                 <div class="menu">
-                    <a href="#catalog">
+                    <a href="index.html#catalog">
                         Голограммы
                     </a>
                     <a href="contact.html">
                         Контакты
                     </a>
-                    <a href="#feedback-form" onclick="showFeedback()">
+                    <a href="index.html#feedback-form">
                         Обратная связь
                     </a>
                 </div>
                 <div class="cartImg">
-                    <a href="favorite.html" onclick="showCart()"><span class="heart-red">&#10084</span> Избранное</a>
-                    <!-- <button id="countCart"></button> -->
+                    <a href="favorite.html"><span class="heart-red">&#10084</span> Избранное</a>
                 </div>
             </div>
-
-
         </div>
     </header>
+
     <article class="main">
-        <article class="contact">
-            <div class="wrapper">
-                <div class="contact-container">
-                    контакты
+        <div class="wrapper">
+
+            <article id="favorite-page">
+                <div class="favorite-page__title">У Вас в Избранном:</div>
+                <div class="favorite-page__catalog">
+                    <div class="favorite-page__cards">
+                        
+                    </div>    
                 </div>
-            </div>
-        </article>
+            </article>
+
+        </div>
     </article>
 
 
@@ -49,14 +52,12 @@
             <div class="footerMenu">
                 <a href="tel: +79060685310" target="_blank">☏ +7(906)068-53-10</a>
                 <a href="mailto: evchemez@mail.ru" target="_blank">✉ evchemez@mail.ru</a>
-                <div class="contact">
-                    <a href="#"><img src="img/whatsap.png" class="contactsSize"></a>
-                    <a href="#"><img src="img/telegramm.png" class="contactsSize"></a>
+                <div class="links">
+                    <a href="whatsapp://send?phone=79060685310"><img src="img/whatsapp.png" class="contactsSize"></a>
+                    <a href="https://t.me/KlevtsovaEV"><img src="img/telegramm.png" class="contactsSize"></a>
 
                 </div>
-            </div>
-            <!-- <div id="info"><i>Учебный проект с использованием API: </i><a href="https://fakestoreapi.com/products/" target="_blank"><i>https://fakestoreapi.com/products/</i></a></div> -->
-        
+            </div>        
         </div>
     </div>
     </footer> 
@@ -71,7 +72,7 @@
             </div>
             <div class="description">
                 <h3>{price} &#8381</h3>
-                <div id="name">{title}</div>
+                <div class="name">{title}</div>
             </div>
             <div class="btn">
                 <button id="cart{id}" class="cartBtn cartAdd" onclick="hiddenCartAdd()">В избранное</button>
